@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-const phrases = ['AI Enthusiast', 'Full-Stack Developer', 'Creative Coder'];
+const phrases = ['AI + LLM engineering', 'Full-Stack Developer', 'Creative Coder', 'Problem Solver'];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);

@@ -3,27 +3,29 @@ import { useState } from 'react';
 
 const jobs = [
   {
-    company: 'NeuroTech AI',
-    role: 'ML Engineer',
-    duration: '2023 – Present',
+    company: 'Emeelan Private limited ',
+    role: 'AI/ML and Python Intern',
+    duration: 'JUNE 2025 – Present',
     details:
-      'Designed end-to-end pipelines for NLP models, improving inference speed by 40%.',
+      'Developed a multilingual AI-powered TTS model supporting 35+ languages and custom inputs, achieving 85% synthesis accuracy. Built an offline AI assistant using Ollama (Llama 2/Mistral) with 92% task success, <500ms latency, and $300 monthly cost savings.',
   },
   {
-    company: 'PixelPerfect Inc.',
-    role: 'Frontend Developer',
-    duration: '2021 – 2023',
+    company: 'DevFrame Studio',
+    role: 'Software Developer Intern ',
+    duration: 'APRIL 2025 – Present',
     details:
-      'Led React migration, implemented design system, reduced bundle size by 25%.',
+      'Implemented responsive UI designs using Tailwind CSS, ensuring flawless performance and 100% compatibility across mobile, tablet, and desktop devices. Collaborated on 5+ full-stack features, significantly enhancing platform functionality and driving a measurable 30% increase in overall user engagement.',
   },
   {
-    company: 'CloudBase Solutions',
-    role: 'Backend Intern',
-    duration: '2020 – 2021',
+    company: 'MLP Techster',
+    role: 'Frontend Developer Intern',
+    duration: 'JAN 2025 - JUNE 2025 ',
     details:
-      'Built RESTful APIs with Django, integrated PostgreSQL, containerized with Docker.',
+      'Designed and enhanced 3+ user-focused, fully responsive web interfaces by applying modern UI/UX best practices and accessibility standards, resulting in a measurable 60% increase in user engagement, improved navigation efficiency, and delivering an overall enhanced digital experience for all users.',
   },
 ];
+
+/* … imports stay the same … */
 
 export default function Experience() {
   const [open, setOpen] = useState(null);
@@ -37,28 +39,36 @@ export default function Experience() {
       >
         Experience
       </motion.h2>
+
       <div className="max-w-4xl mx-auto space-y-6">
         {jobs.map((job, i) => (
           <motion.div
             key={i}
             layout
             onClick={() => setOpen(open === i ? null : i)}
-            className="bg-neutral-900 rounded-xl p-6 cursor-pointer hover:shadow-accent/30 shadow-lg transition-shadow"
+            className="bg-neutral-900 rounded-xl p-4 sm:p-6 cursor-pointer hover:shadow-accent/30 shadow-lg transition-shadow"
             whileHover={{ scale: 1.02 }}
           >
-            <div>
-              <h3 className="text-xl font-semibold text-accent">{job.company}</h3>
-              <p className="text-gray-400">
-                {job.role} • {job.duration}
+            {/* responsive header */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h3 className="text-lg sm:text-xl font-semibold text-accent">
+                  {job.company}
+                </h3>
+                <p className="text-sm text-gray-300">{job.role}</p>
+              </div>
+              <p className="text-sm text-gray-400 mt-1 sm:mt-0 sm:text-right shrink-0">
+                {job.duration}
               </p>
             </div>
+
             <AnimatePresence>
               {open === i && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  className="mt-4 text-gray-300"
+                  className="mt-3 text-sm sm:text-base text-gray-300"
                 >
                   {job.details}
                 </motion.div>
