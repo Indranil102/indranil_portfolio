@@ -1,22 +1,22 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 const projects = [
   {
-    name: 'Sentiment Lens',
-    desc: 'Real-time Twitter sentiment analysis dashboard.',
-    tech: ['React', 'Django', 'BERT'],
-    img: '/placeholder.png',
+    name: "Metting Schedular",
+    desc: "Real-time meeting scheduler by analyzing chat transcripts.",
+    tech: ["React", "Django", "BERT", "NLP", "Python"],
+    img: "/src/assets/meet.webp",
   },
   {
-    name: 'AR Interior Designer',
-    desc: 'AR app to visualize furniture in your room.',
-    tech: ['Three.js', 'React', 'WebXR'],
-    img: '/placeholder.png',
+    name: "Text-to-Speech",
+    desc: "Any custom text can be converted into speech, and users can also use their own custom voice.",
+    tech: ["ReactJS", "Flask", "GTTS", "Tailwind CSS"],
+    img: "/src/assets/tts.webp",
   },
   {
-    name: 'DevTube',
-    desc: 'YouTube clone tailored for dev tutorials.',
-    tech: ['Next.js', 'Tailwind', 'PostgreSQL'],
-    img: '/placeholder.png',
+    name: "Helper Team",
+    desc: "Website enabling college students to access the student server and previous year question papers. ",
+    tech: ["Next.js", "Tailwind", "PostgreSQL"],
+    img: "/src/assets/teamwork-high-five-concept-illustration_114360-15305.webp",
   },
 ];
 
@@ -40,7 +40,11 @@ export default function Projects() {
             whileHover={{ y: -6 }}
             className="bg-neutral-900 rounded-xl overflow-hidden shadow-lg hover:shadow-accent/30"
           >
-            <img src={p.img} alt={p.name} className="h-48 w-full object-cover" />
+            <img
+              src={p.img}
+              alt={p.name}
+              className="h-48 w-full object-cover"
+            />
             <div className="p-5">
               <h3 className="text-xl font-semibold mb-2">{p.name}</h3>
               <p className="text-sm text-gray-400 mb-3">{p.desc}</p>
