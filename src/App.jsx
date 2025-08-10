@@ -1,14 +1,23 @@
-
 import './App.css'
+import AnimatedBg from './components/AnimatedBg'
+import Contact from './components/Contact'
+import Experience from './components/Experience'
+import Hero from './components/Hero'
+import { Navbar } from './components/Navbar'
+import Projects from './components/Projects'
+import Skills from './components/Skills'
 
 function App() {
- 
 
   return (
     <>
-    <h1 className="text-3xl font-bold underline bg-green-300">
-      Hello world!
-    </h1>
+    <AnimatedBg />
+    <Navbar />
+      <Hero />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Contact />
     </>
   )
 }
