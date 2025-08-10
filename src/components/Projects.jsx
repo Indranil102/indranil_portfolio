@@ -15,7 +15,7 @@ const projects = [
   {
     name: "Helper Team",
     desc: "Website enabling college students to access the student server and previous year question papers. ",
-    tech: ["Next.js", "Tailwind", "PostgreSQL"],
+    tech: ["ReactJS", "CSS", "GIT"],
     img: "/src/assets/teamwork-high-five-concept-illustration_114360-15305.webp",
   },
 ];
@@ -64,13 +64,14 @@ export default function Projects() {
       </div>
       <div className="text-center mt-10">
         <a
-          href="https://github.com/indranil19"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-accent text-black font-semibold px-6 py-2 rounded hover:bg-accent2 transition"
-        >
-          View More on GitHub
-        </a>
+  href="https://github.com/Indranil102"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-accent text-black font-semibold px-6 py-2 rounded
+             hover:bg-[#00ffc8] hover:text-black transition-colors duration-300"
+>
+  View More on GitHub
+</a>
       </div>
     </section>
   );
