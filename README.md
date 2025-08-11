@@ -1,12 +1,67 @@
-# React + Vite
+# Indranil's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive design that works on all devices
+- Smooth animations with Framer Motion
+- Contact form with EmailJS integration
+- Modern UI with Tailwind CSS
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- EmailJS
+- React Icons
+
+## Setup and Installation
+
+1. Clone the repository
+   ```bash
+   git clone <repository-url>
+   cd indranil_portfolio
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Environment Variables
+   - Copy the `.env.example` file to `.env`
+   ```bash
+   cp .env.example .env
+   ```
+   - Update the `.env` file with your EmailJS credentials
+
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+## EmailJS Setup
+
+This project uses EmailJS for the contact form. To set it up:
+
+1. Sign up at [EmailJS](https://www.emailjs.com/)
+2. Create a service and template
+3. Add your credentials to the `.env` file:
+   ```
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+## Deployment
+
+To build for production:
+
+```bash
+npm run build
+```
+
+The build files will be in the `dist` directory, which you can deploy to any static hosting service.

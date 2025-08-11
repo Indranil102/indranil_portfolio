@@ -1,7 +1,13 @@
+// src/components/Contact.jsx
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
+// EmailJS credentials from environment variables
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const form = useRef();
@@ -9,12 +15,7 @@ export default function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        form.current,
-        'YOUR_PUBLIC_KEY'
-      )
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
       .then(() => alert('Message sent!'))
       .catch(() => alert('Failed, please try again.'));
   };
@@ -28,19 +29,21 @@ export default function Contact() {
       >
         Contact
       </motion.h2>
+
+      {/* ── Contact form ── */}
       <form
         ref={form}
         onSubmit={sendEmail}
         className="max-w-xl mx-auto space-y-4"
       >
         <input
-          name="name"
+          name="user_name"
           placeholder="Name"
           required
           className="w-full p-3 rounded bg-neutral-800 outline-none focus:ring-2 ring-accent"
         />
         <input
-          name="email"
+          name="user_email"
           type="email"
           placeholder="Email"
           required
@@ -56,11 +59,13 @@ export default function Contact() {
         <button
           type="submit"
           className="inline-block bg-accent text-black font-semibold px-6 py-2 rounded
-             hover:bg-[#00ffc8] hover:text-black transition-colors duration-300"
+                     hover:bg-[#00ffc8] hover:text-black transition-colors duration-300"
         >
           Send Message
         </button>
       </form>
+
+      {/* ── Social icons ── */}
       <div className="flex justify-center gap-6 mt-8 text-3xl">
         <a
           href="https://linkedin.com/in/indranil19"
@@ -79,6 +84,8 @@ export default function Contact() {
           <FaGithub />
         </a>
       </div>
+
+      {/* ── Resume download ── */}
       <div className="text-center mt-6">
         <a
           href="/resume.pdf"
