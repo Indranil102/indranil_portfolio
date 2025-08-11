@@ -1,22 +1,27 @@
+// src/components/Projects.jsx
 import { motion } from "framer-motion";
+
 const projects = [
   {
-    name: "Metting Schedular",
+    name: "Meeting Scheduler",
     desc: "Real-time meeting scheduler by analyzing chat transcripts.",
     tech: ["React", "Django", "BERT", "NLP", "Python"],
     img: "/src/assets/meet.webp",
+    repo: "https://github.com/Indranil102/provivo_aiml.git", // ⬅️ change
   },
   {
     name: "Text-to-Speech",
-    desc: "Any custom text can be converted into speech, and users can also use their own custom voice.",
+    desc: "Custom text-to-speech with user-defined voices.",
     tech: ["ReactJS", "Flask", "GTTS", "Tailwind CSS"],
     img: "/src/assets/tts.webp",
+    repo: "https://github.com/Indranil102/text-to-voice/tree/main/venv", // ⬅️ change
   },
   {
     name: "Helper Team",
-    desc: "Website enabling college students to access the student server and previous year question papers. ",
+    desc: "Portal for college resources & previous-year papers.",
     tech: ["ReactJS", "CSS", "GIT"],
     img: "/src/assets/teamwork-high-five-concept-illustration_114360-15305.webp",
+    repo: "https://github.com/Indranil102/Helper_Team.git", // ⬅️ change
   },
 ];
 
@@ -30,15 +35,19 @@ export default function Projects() {
       >
         Projects
       </motion.h2>
+
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {projects.map((p, i) => (
-          <motion.div
+          <motion.a
             key={i}
+            href={p.repo}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.15 }}
             whileHover={{ y: -6 }}
-            className="bg-neutral-900 rounded-xl overflow-hidden shadow-lg hover:shadow-accent/30"
+            className="bg-neutral-900 rounded-xl overflow-hidden shadow-lg hover:shadow-accent/30 block"
           >
             <img
               src={p.img}
@@ -59,19 +68,20 @@ export default function Projects() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
+
       <div className="text-center mt-10">
         <a
-  href="https://github.com/Indranil102"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block bg-accent text-black font-semibold px-6 py-2 rounded
-             hover:bg-[#00ffc8] hover:text-black transition-colors duration-300"
->
-  View More on GitHub
-</a>
+          href="https://github.com/Indranil102"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-accent text-black font-semibold px-6 py-2 rounded
+                     hover:bg-[#00ffc8] hover:text-black transition-colors duration-300"
+        >
+          View More on GitHub
+        </a>
       </div>
     </section>
   );
