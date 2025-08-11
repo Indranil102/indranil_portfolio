@@ -68,7 +68,7 @@ export default function Contact() {
       {/* ── Social icons ── */}
       <div className="flex justify-center gap-6 mt-8 text-3xl">
         <a
-          href="https://linkedin.com/in/indranil19"
+          href="https://www.linkedin.com/in/indranil-samanta-26558a253/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent transition"
@@ -76,7 +76,7 @@ export default function Contact() {
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/indranil19"
+          href="https://github.com/Indranil102"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-accent transition"
@@ -87,14 +87,13 @@ export default function Contact() {
 
       {/* ── Resume download ── */}
       <div className="text-center mt-6">
-        <a
-          href="/resume.pdf"
-          download
-          className="inline-block underline text-accent hover:text-accent2"
-        >
-          Download Resume
-        </a>
-      </div>
+  <a
+    href="https://drive.google.com/file/d/1azX1Zj3whIaZTPXu0wP6NOfLFQ9AU9T7/view?usp=sharing"
+    className="inline-block underline text-accent hover:text-accent2"
+  >
+    Download Resume
+  </a>
+</div>
     </section>
   );
 }
