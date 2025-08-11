@@ -6,21 +6,21 @@ const projects = [
     name: "Meeting Scheduler",
     desc: "Real-time meeting scheduler by analyzing chat transcripts.",
     tech: ["React", "Django", "BERT", "NLP", "Python"],
-    img: "/src/assets/meet.webp",
+    img: "/src/meet.webp",
     repo: "https://github.com/Indranil102/provivo_aiml.git", // ⬅️ change
   },
   {
     name: "Text-to-Speech",
     desc: "Custom text-to-speech with user-defined voices.",
     tech: ["ReactJS", "Flask", "GTTS", "Tailwind CSS"],
-    img: "/src/assets/tts.webp",
+    img: "/src/tts.webp",
     repo: "https://github.com/Indranil102/text-to-voice/tree/main/venv", // ⬅️ change
   },
   {
     name: "Helper Team",
     desc: "Portal for college resources & previous-year papers.",
     tech: ["ReactJS", "CSS", "GIT"],
-    img: "/src/assets/teamwork-high-five-concept-illustration_114360-15305.webp",
+    img: "/src/teamwork-high-five-concept-illustration_114360-15305.webp",
     repo: "https://github.com/Indranil102/Helper_Team.git", // ⬅️ change
   },
 ];
