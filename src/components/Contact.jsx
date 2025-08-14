@@ -1,5 +1,5 @@
 // src/components/Contact.jsx
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { Toaster, toast } from 'react-hot-toast';
@@ -12,13 +12,33 @@ const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const form = useRef();
+  const [ready, setReady] = useState(false);
+
+  // Initialize EmailJS once
+  useEffect(() => {
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error("❌ Missing EmailJS environment variables");
+    } else {
+      emailjs.init(PUBLIC_KEY);
+      console.log("✅ EmailJS initialized with key:", PUBLIC_KEY);
+      setReady(true);
+    }
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!ready) {
+      toast.error("Email service is not ready yet. Please try again in a moment.");
+      return;
+    }
+
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current)
       .then(() => toast.success('Message sent!'))
-      .catch(() => toast.error('Failed, please try again.'));
+      .catch((err) => {
+        console.error("Email send error:", err);
+        toast.error('Failed, please try again.');
+      });
   };
 
   return (
@@ -60,10 +80,11 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="inline-block bg-accent text-black font-semibold px-6 py-2 rounded
-                     hover:bg-[#00ffc8] hover:text-black transition-colors duration-300"
+          disabled={!ready}
+          className={`inline-block bg-accent text-black font-semibold px-6 py-2 rounded transition-colors duration-300 
+            ${!ready ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#00ffc8] hover:text-black'}`}
         >
-          Send Message
+          {ready ? 'Send Message' : 'Loading...'}
         </button>
       </form>
 
@@ -101,4 +122,3 @@ export default function Contact() {
     </section>
   );
 }
-
