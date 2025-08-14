@@ -89,7 +89,7 @@ export default function Contact() {
       {/* Resume */}
       <div className="text-center mt-6">
         <a
-          href="https://drive.google.com/uc?export=download&id=1azX1Zj3whIaZTPXu0wP6NOfLFQ9AU9T7"
+          href="https://drive.google.com/file/d/1ZzSPkBJ-nwaQSl-xHd-U9X65r3uJkh5s/view?usp=sharing"
           className="inline-block underline text-accent hover:text-accent2"
         >
           Download Resume
