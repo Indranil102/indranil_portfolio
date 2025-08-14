@@ -1,9 +1,11 @@
+// src/components/Contact.jsx
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { Toaster, useToast } from 'react-hot-toast';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
+// EmailJS credentials from environment variables
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -30,26 +32,27 @@ export default function Contact() {
         Contact
       </motion.h2>
 
+      {/* Contact form */}
       <form
         ref={form}
         onSubmit={sendEmail}
         className="max-w-xl mx-auto space-y-4"
       >
         <input
-          name="user_name" // Corrected to match EmailJS template
+          name="user_name"
           placeholder="Name"
           required
           className="w-full p-3 rounded bg-neutral-800 outline-none focus:ring-2 ring-accent"
         />
         <input
-          name="user_email" // Corrected to match EmailJS template
+          name="user_email"
           type="email"
           placeholder="Email"
           required
           className="w-full p-3 rounded bg-neutral-800 outline-none focus:ring-2 ring-accent"
         />
         <textarea
-          name="message" // Corrected to match EmailJS template
+          name="message"
           placeholder="Message"
           required
           rows="5"
@@ -89,7 +92,7 @@ export default function Contact() {
       {/* Resume */}
       <div className="text-center mt-6">
         <a
-          href="https://drive.google.com/file/d/1ZzSPkBJ-nwaQSl-xHd-U9X65r3uJkh5s/view?usp=sharing"
+          href="https://drive.google.com/uc?export=download&id=1azX1Zj3whIaZTPXu0wP6NOfLFQ9AU9T7"
           className="inline-block underline text-accent hover:text-accent2"
         >
           Download Resume
