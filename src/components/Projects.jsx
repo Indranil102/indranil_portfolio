@@ -5,16 +5,26 @@ const projects = [
   {
     name: "Meeting Scheduler",
     desc: "Real-time meeting scheduler by analyzing chat transcripts.",
-    tech: ["React", "Django", "BERT", "NLP", "Python"],
+    tech: ["React", "Django", "BERT", "NLP", "Python","Flask"],
     img: "/assets/meet.webp",
     repo: "https://github.com/Indranil102/provivo_aiml.git", // ⬅️ change
   },
   {
     name: "Text-to-Speech",
     desc: "Custom text-to-speech with user-defined voices.",
-    tech: ["ReactJS", "Flask", "GTTS", "Tailwind CSS"],
+    tech: ["ReactJS", "Flask", "GTTS", "Tailwind CSS"," Python","Flask", "OLLAMA", "LLM"],
     img: "/assets/tts.webp",
     repo: "https://github.com/Indranil102/text-to-voice/tree/main/venv", // ⬅️ change
+  },
+  
+  {
+    name: "Heritage Site Virtual Guide",
+    desc: "AI tool that identifies heritage sites from images and delivers quick historical info using LLMs."
+,
+
+    tech: ["Python", "StreamLit", "GIT","OpenRouter", "LLM", "Hugging-Face","FastAPI","Image Processing","MongoDB"],
+    img: "/assets/heritage.png",
+    repo: "https://github.com/Indranil102/heritagevirtualapp.git", // ⬅️ change
   },
   {
     name: "Helper Team",
