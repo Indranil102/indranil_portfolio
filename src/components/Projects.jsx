@@ -19,8 +19,7 @@ const projects = [
   
   {
     name: "Heritage Site Virtual Guide",
-    desc: "AI tool that identifies heritage sites from images and delivers quick historical info using LLMs."
-,
+    desc: "AI tool that identifies heritage sites from images and delivers quick historical info using LLMs.",
 
     tech: ["Python", "StreamLit", "GIT","OpenRouter", "LLM", "Hugging-Face","FastAPI","Image Processing","MongoDB"],
     img: "/assets/heritage.png",
