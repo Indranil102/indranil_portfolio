@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaJsSquare } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaJsSquare, FaBrain, FaLanguage, FaStar, FaLink, FaDatabase, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import {
   SiTailwindcss,
   SiDjango,
@@ -9,20 +9,33 @@ import {
   SiSqlite,
   SiFirebase,
   SiMysql,
+  SiFastapi,
+  SiC,
+  SiCplusplus,
 } from 'react-icons/si';
 
 const skills = [
   { icon: <FaReact />, name: 'React JS' },
   { icon: <SiNextdotjs />, name: 'Next.js' },
   { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
+  { icon: <FaHtml5 />, name: 'HTML' },
+  { icon: <FaCss3Alt />, name: 'CSS' },
   { icon: <FaJsSquare />, name: 'JavaScript' },
   { icon: <FaPython />, name: 'Python' },
+  { icon: <SiC />, name: 'C' },
+  { icon: <SiCplusplus />, name: 'C++' },
   { icon: <SiDjango />, name: 'Django' },
   { icon: <SiPostgresql />, name: 'SQL' },
   { icon: <SiMongodb />, name: 'MongoDB' },
   { icon: <SiSqlite />, name: 'SQLite' },
   { icon: <SiFirebase />, name: 'Firebase' },
   { icon: <FaGitAlt />, name: 'Git' },
+  { icon: <SiFastapi />, name: 'FastAPI' },
+  { icon: <FaLink />, name: 'LangChain' },
+  { icon: <FaDatabase />, name: 'RAG' },
+  { icon: <FaBrain />, name: 'ML' },
+  { icon: <FaLanguage />, name: 'NLP' },
+  { icon: <FaStar />, name: 'LLM' },
 ];
 
 export default function Skills() {
