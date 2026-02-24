@@ -5,7 +5,7 @@ const jobs = [
   {
     company: 'Emeelan Private limited ',
     role: 'AI/ML and Python Intern',
-    duration: 'JUNE 2025 – JuLY 2025',
+    duration: 'JUNE 2025 – JULY 2025',
     details:
       'Developed a multilingual AI-powered TTS model supporting 35+ languages and custom inputs, achieving 85% synthesis accuracy. Built an offline AI assistant using Ollama (Llama 2/Mistral) with 92% task success, <500ms latency, and $300 monthly cost savings.',
   },
