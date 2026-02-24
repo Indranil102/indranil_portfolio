@@ -9,14 +9,13 @@ export default function AnimatedBg() {
   ];
 
   const variants = {
-    initial: { x: "-50%", y: "-50%" },
+    initial: { x: "-50%", y: "-50%", opacity: 0.3 },
     animate: (i) => ({
-      x: ["-50%", "-45%", "-55%", "-50%"],
-      y: ["-50%", "-55%", "-45%", "-50%"],
-      scale: [1, 1.2, 1, 0.9, 1],
-      opacity: [0.25, 0.4, 0.25, 0.15, 0.25],
+      x: ["-50%", "-48%", "-52%", "-50%"],
+      y: ["-50%", "-52%", "-48%", "-50%"],
+      opacity: [0.3, 0.5, 0.3, 0.4, 0.3],
       transition: {
-        duration: 20 + i * 5,
+        duration: 25 + i * 5,
         repeat: Infinity,
         ease: "easeInOut",
       },
