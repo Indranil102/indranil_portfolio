@@ -1,67 +1,43 @@
-# Indranil's Portfolio
+# 🚀 Indranil’s Dev Portfolio
 
-A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
+Welcome to my portfolio website codebase! This is a **modern, responsive developer portfolio** built with React, Vite, TailwindCSS, and Framer Motion. It showcases my work, skills, and provides a contact form powered by EmailJS.
 
-## Features
+## 🛠 Features
 
-- Responsive design that works on all devices
-- Smooth animations with Framer Motion
-- Contact form with EmailJS integration
-- Modern UI with Tailwind CSS
+- Fully **responsive design** (mobile → desktop)
+- **Smooth animations** using Framer Motion
+- **Interactive contact form** with EmailJS integration
+- Clean, modern UI made with TailwindCSS
+- Deployed and ready to share 💡
 
-## Technologies Used
+## 🧰 Technologies Used
 
-- React
-- Vite
-- Tailwind CSS
-- Framer Motion
-- EmailJS
-- React Icons
+| Tool / Library | Purpose |
+|---------------|---------|
+| **React**     | UI component library |
+| **Vite**      | Fast build / dev tooling |
+| **Tailwind CSS** | Utility-first styling |
+| **Framer Motion** | Animations |
+| **EmailJS**   | Contact form backend |
+| **React Icons** | Icon set |
 
-## Setup and Installation
+## 📬 Contact
 
-1. Clone the repository
-   ```bash
-   git clone <repository-url>
-   cd indranil_portfolio
-   ```
+If you'd like to collaborate, discuss a project, or just connect — feel free to reach out.
 
-2. Install dependencies
-   ```bash
-   npm install
-   ```
+- 📧 Email: indranilsamanta2003@gmail.com  
+- 💼 LinkedIn: https://www.linkedin.com/in/indranil-samanta-26558a253  
+- 🧑‍💻 GitHub: https://github.com/Indranil102  
+- 🌐 Portfolio: https://indranil-portfolio-gray.vercel.app/
 
-3. Environment Variables
-   - Copy the `.env.example` file to `.env`
-   ```bash
-   cp .env.example .env
-   ```
-   - Update the `.env` file with your EmailJS credentials
+I’m always open to opportunities in:
+- Full-Stack Development
+- AI/ML Projects
+- Chatbots applications
+- Scalable Web Applications
 
-4. Start the development server
-   ```bash
-   npm run dev
-   ```
+---
 
-## EmailJS Setup
+## 🤝 Let’s Connect
 
-This project uses EmailJS for the contact form. To set it up:
-
-1. Sign up at [EmailJS](https://www.emailjs.com/)
-2. Create a service and template
-3. Add your credentials to the `.env` file:
-   ```
-   VITE_EMAILJS_SERVICE_ID=your_service_id
-   VITE_EMAILJS_TEMPLATE_ID=your_template_id
-   VITE_EMAILJS_PUBLIC_KEY=your_public_key
-   ```
-
-## Deployment
-
-To build for production:
-
-```bash
-npm run build
-```
-
-The build files will be in the `dist` directory, which you can deploy to any static hosting service.
+If you’re a recruiter, developer, or founder looking to build something impactful, I’d love to talk.
