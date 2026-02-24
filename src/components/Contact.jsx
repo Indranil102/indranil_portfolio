@@ -113,10 +113,10 @@ export default function Contact() {
       {/* Resume */}
       <div className="text-center mt-6">
         <a
-          href="https://drive.google.com/file/d/1NJrUhFONM-RbNE7SGw5PapnKioABuGlQ/view?usp=sharing"
+          href="https://drive.google.com/file/d/1Ro95XXEQooupkBBSTv2nXucfXlj7VXTC/view?usp=sharing"
           className="inline-block underline text-accent hover:text-accent2"
         >
-          Download Resume
+          View Resume
         </a>
       </div>
     </section>
